@@ -2,23 +2,17 @@ package string_utils
 
 import (
 	"github.com/stretchr/testify/assert"
+	"strings"
 	"testing"
 )
 
-func TestEqualsIgnoreCase(t *testing.T) {
-	target := "target"
-	v := "TaRget"
-
-	e := EqualsIgnoreCase(target, v)
-
-	assert.True(t, e)
-}
-
 func TestContainsIgnoreCase(t *testing.T) {
 	target := "target"
-	v := "tar"
+	v := "taR"
 
 	e := ContainsIgnoreCase(target, v)
+	e2 := strings.Contains(target, v)
 
 	assert.True(t, e)
+	assert.False(t, e2)
 }

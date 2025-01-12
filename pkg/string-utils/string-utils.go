@@ -10,10 +10,3 @@ func ContainsIgnoreCase(t, v string) bool {
 
 	return strings.Contains(t, v)
 }
-
-func EqualsIgnoreCase(t, v string) bool {
-	t = strings.ToLower(t)
-	v = strings.ToLower(v)
-
-	return strings.EqualFold(t, v)
-}
